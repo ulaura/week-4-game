@@ -1,0 +1,53 @@
+Variables for program
+---------------------
+var crystal-1 = random number generated for first crystal.
+var crystal-2 = random number generated for second crystal.
+var crystal-3 = random number generated for third crystal.
+var crystal-4 = random number generated for fourth crystal.
+
+var computerChoice = random number generated and visible to user. 
+var userCounter = the number the user adds to by clicking each crystal.
+
+var wins = The number of times the user has won the game.
+var losses = The number of times the user has lost the game. 
+
+The value for each crystal is generated and then hidden from the user!
+Each crystal randomizes from 1 to 12.
+
+computerChoice random number range is 18 to 120. 
+This is always visible to the user. 
+
+userCounter is always visible to the user. 
+
+
+
+On click events for each crystal
+--------------------------------
+Each click adds the crystal's random number to userCounter.
+
+
+If/Else If/Else statements to check userCounter against computerChoice.
+-----------------------------------------------------------------------
+If userCounter === computerChoice:
+	User wins.
+	wins++
+	resetGame()**
+
+Else If userCounter >= computerChoice: (User's number exceeds the computer number)
+	User loses.
+	losses++
+	resetGame()**
+
+
+
+**function resetGame():
+	Make the computer generate a new random number.
+	Make all four crystals generate a new random number.
+	Set userCounter back to zero. 
+	(But leave the wins and losses counters alone)
+
+	
+
+
+
+

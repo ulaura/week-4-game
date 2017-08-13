@@ -28,6 +28,7 @@ $("#blue-crystal").on("click", function() {
 	userCounter = crystal_1 +  userCounter;
 	console.log("New userCounter: " + userCounter); //test
 	$("#total_score").html(userCounter);
+	isJustRight();
 
 });
 
@@ -36,6 +37,7 @@ $("#red-crystal").on("click", function() {
 	userCounter = crystal_2 +  userCounter;
 	console.log("New userCounter: " + userCounter); //test
 	$("#total_score").html(userCounter);
+	isJustRight();
 
 });
 
@@ -44,7 +46,7 @@ $("#green-crystal").on("click", function() {
 	userCounter = crystal_3 +  userCounter;
 	console.log("New userCounter: " + userCounter); //test
 	$("#total_score").html(userCounter);
-
+	isJustRight();
 });
 
 $("#orange-crystal").on("click", function() {
@@ -52,23 +54,31 @@ $("#orange-crystal").on("click", function() {
 	userCounter = crystal_4 +  userCounter;
 	console.log("New userCounter: " + userCounter); //test
 	$("#total_score").html(userCounter);
-
+	isJustRight();
 });
 
 
-//if else statement to see if user wins or loses
-if (userCounter === computerChoice) {
-	console.log("You win!");
-	wins++;
-	$("#wins_id").html(wins);
+//function of if else statement to see if user wins or loses
+function isJustRight() {
+	if (userCounter === computerChoice) {
+		console.log("You win!"); //test
+		alert("You win!");
+		wins++;
+		$("#wins_id").html(wins);
+		
+	} else if (userCounter > computerChoice) {
+		console.log("You lose!"); //test
+		alert("YOU LOSE!!");
+		losses++;
+		$("#losses_id").html(losses);
+		
+	}
+}
 
-} else if (userCounter > computerChoice) {
-	console.log("You lose!");
-	losses++;
-	$("#losses_id").html(losses);
 
-};
-
-
+/* Other things that are needed:
+- Create a way to reset the game without having to reload the page.
+- Style the html page so it doesn't look so plain. 
+*/
 
 
